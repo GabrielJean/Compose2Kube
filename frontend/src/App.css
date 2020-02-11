@@ -1,0 +1,14 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}

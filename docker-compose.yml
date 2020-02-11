@@ -1,21 +1,31 @@
 version: "2"
 
 services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:8080
+    volumes:
+      - ./nginx/nginx-proxy.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./backend/config/static/:/static
+    depends_on:
+      - backend
+      - frontend
 
   frontend:
     build: ./frontend
-    container_name: "Compose2Kube_frontend"
+    container_name: "Com2Kube_frontend"
     volumes:
-      - "./frontend:/usr/share/nginx/html/"
+      - "./frontend:/home/node"
     ports:
-      - 80:80
+      - 3000:3000
     depends_on:
       - backend
-    
+
   backend:
     build: ./backend
-    container_name: "Compose2Kube_backend"
+    container_name: "Com2Kube_backend"
     volumes:
-      - "./backend:/app"
+      - "./backend:/home/node"
     ports:
       - 5000:5000

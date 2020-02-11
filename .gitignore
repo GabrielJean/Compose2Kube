@@ -1,2 +1,4 @@
 .vscode/settings.json
 backend/__pycache__/
+node_modules/
+npm-debug.log
