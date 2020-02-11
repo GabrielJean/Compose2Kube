@@ -1,60 +1,27 @@
-# Com2Kube
+# Com2kube - Frontend
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![BCH compliance](https://bettercodehub.com/edge/badge/CB-GJ/Com2Kube?branch=master)](https://bettercodehub.com/) ![](https://github.com/CB-GJ/Com2kube/workflows/Build%20Frontend/badge.svg) ![](https://github.com/CB-GJ/Com2kube/workflows/Build%20Backend/badge.svg)
+This is the frontend architecture for Com2kube made in React and React Material UI.
 
-This project aims to provide an easy way for docker-compose users to convert their deployment files for Kubernetes
+## App Structure
 
-## Getting started
+    .
+    ├── public                  # Compiled files (alternatively `dist`)
+    |   └── locales             # translation files
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    |   ├── asset               # Icons, images and data files
+    |   ├── components          # Components use in the app
+    |   ├── pages               # Pages in the app
+    |   └── themes              # Core component in the app (`footer` and `header`)
+    ├── __test__                # Automated tests (alternatively `spec` or `tests`)
+    ├── Dockerfile              # Frontend dockerfile
+    ├── package.json
+    └── README.md
 
-```text
-git clone https://github.com/Com2Kube/Com2Kube.git
-cd Com2Kube
-npm install
-```
+## Features
 
-### Start the project locally
-
-We are using Docker as our development environment so that anyone can simply clone the repository and get to work in minutes.
-The only requirements is to have Docker and docker-compose installed on your computer.
-
-```text
-docker-compose up
-```
-
-To force docker to rebuild the images : `docker-compose up --build`
-
-## Build with
-
-### Frontend
-
-- React
+- Linting
+- Prettier
 - React Material UI
-- [React Syntaxe Highlighter](https://github.com/conorhastings/react-syntax-highlighter/tree/f7e4774b9cbc76fb42ee97e8861349aa1d50e532)
-- [React i18next](https://github.com/i18next/react-i18next)
-
-### Backend
-
-- ExpressJS
-- Multer
-- Kompose
-
-## Roadmap
-
-- [ ] File drop
-- [ ] Helm Chart
-- [ ] Download the file with preview option
-- [ ] Dark theme
-- [ ] Save file to Github repo
-
-## Contribute
-
-Thank your for contributing to our project. Please follow our [Contributing documentation](CONTRIBUTING.md) and the [Code of Conduct](CODE-OF-CONDUCT.md)
-
-## Contributors
-
-- [Gabriel Jean](https://github.com/GabrielJean)
-- [Claire Bun](https://github.com/cbun097)
-
-## Licence
-
-[Apache License](LICENCE.md)
+- React Syntax Highlight
+- Translations (French and English)
